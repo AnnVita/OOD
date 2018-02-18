@@ -3,7 +3,9 @@
 #include <vector>
 #include <algorithm>
 #include <climits>
+#include <memory>
 #include "Observer.h"
+#include "StatsInfo.h"
 
 using namespace std;
 
@@ -39,27 +41,23 @@ private:
 	*/
 	void Update(SWeatherInfo const& data) override
 	{
-		if (m_minTemperature > data.temperature)
-		{
-			m_minTemperature = data.temperature;
-		}
-		if (m_maxTemperature < data.temperature)
-		{
-			m_maxTemperature = data.temperature;
-		}
-		m_accTemperature += data.temperature;
-		++m_countAcc;
+		m_statsTemperatureInfo->Update(data.temperature);
+		m_statsPressureInfo->Update(data.pressure);
+		m_statsHumidityInfo->Update(data.humidity);
+		
+		std::cout << "Temperature statistic:" << std::endl;
+		m_statsTemperatureInfo->Print();
 
-		std::cout << "Max Temp " << m_maxTemperature << std::endl;
-		std::cout << "Min Temp " << m_minTemperature << std::endl;
-		std::cout << "Average Temp " << (m_accTemperature / m_countAcc) << std::endl;
-		std::cout << "----------------" << std::endl;
+		std::cout << "Pressure statistic:" << std::endl;
+		m_statsPressureInfo->Print();
+
+		std::cout << "Humidity statistic:" << std::endl;
+		m_statsHumidityInfo->Print();
 	}
-
-	double m_minTemperature = std::numeric_limits<double>::infinity();
-	double m_maxTemperature = -std::numeric_limits<double>::infinity();
-	double m_accTemperature = 0;
-	unsigned m_countAcc = 0;
+ 
+	unique_ptr<CStatsInfo> m_statsTemperatureInfo = make_unique<CStatsInfo>();
+	unique_ptr<CStatsInfo> m_statsPressureInfo = make_unique<CStatsInfo>();
+	unique_ptr<CStatsInfo> m_statsHumidityInfo = make_unique<CStatsInfo>();
 
 };
 
