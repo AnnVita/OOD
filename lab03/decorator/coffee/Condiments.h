@@ -177,3 +177,74 @@ protected:
 private:
 	unsigned m_mass;
 };
+
+class CCream : public CCondimentDecorator
+{
+public:
+	CCream(IBeveragePtr && beverage)
+		: CCondimentDecorator(move(beverage))
+	{}
+protected:
+	double GetCondimentCost()const override
+	{
+		return 25;
+	}
+
+	std::string GetCondimentDescription()const override
+	{
+		return "Cream";
+	}
+};
+
+class CChocolate : public CCondimentDecorator
+{
+public:
+	CChocolate(IBeveragePtr && beverage, size_t quantity = 1)
+		: CCondimentDecorator(move(beverage))
+		, m_quantity(quantity)
+	{
+		m_quantity = quantity > MAX_QUANTITY ? MAX_QUANTITY : quantity;
+	}
+
+protected:
+	double GetCondimentCost() const override
+	{
+		return 10 * static_cast<double>(m_quantity);
+	}
+
+	std::string GetCondimentDescription() const override
+	{
+		return "Chocolate == " + std::to_string(m_quantity);
+	}
+
+private:
+	const size_t MAX_QUANTITY = 5;
+
+	size_t m_quantity;
+};
+
+enum class LiquorType
+{
+	CHOCOLATE,
+	NUT,
+};
+
+class CLiquor : public CCondimentDecorator
+{
+public:
+	CLiquor(IBeveragePtr && beverage, LiquorType LiquorType)
+		: CCondimentDecorator(move(beverage))
+		, m_liquorType(LiquorType)
+	{}
+protected:
+	double GetCondimentCost()const override
+	{
+		return 50;
+	}
+	std::string GetCondimentDescription()const override
+	{
+		return std::string(m_liquorType == LiquorType::CHOCOLATE ? "chocolate" : "nut") + " liquor";
+	}
+private:
+	LiquorType m_liquorType;
+};
