@@ -1,4 +1,8 @@
-﻿#include "Beverages.h"
+﻿#include "Beverage.h"
+#include "Coffee.h"
+#include "Tea.h"
+#include "Milkshake.h"
+
 #include "Condiments.h"
 
 #include <iostream>

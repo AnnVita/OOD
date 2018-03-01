@@ -149,9 +149,12 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Coffee.h" />
     <ClInclude Include="IBeverage.h" />
-    <ClInclude Include="Beverages.h" />
+    <ClInclude Include="Beverage.h" />
     <ClInclude Include="Condiments.h" />
+    <ClInclude Include="Milkshake.h" />
+    <ClInclude Include="Tea.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

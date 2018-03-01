@@ -26,7 +26,16 @@
     <ClInclude Include="IBeverage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Beverages.h">
+    <ClInclude Include="Beverage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Coffee.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tea.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Milkshake.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
