@@ -2,18 +2,17 @@
 
 #include <set>
 #include <functional>
+#include <map>
 
-/*
-Шаблонный интерфейс IObserver. Его должен реализовывать класс, 
-желающий получать уведомления от соответствующего IObservable
-Параметром шаблона является тип аргумента,
-передаваемого Наблюдателю в метод Update
-*/
+template <typename T>
+class IObservable;
+
 template <typename T>
 class IObserver
 {
 public:
-	virtual void Update(T const& data) = 0;
+	//virtual void Update(T const& data) = 0;
+	virtual void Update(T const& data, IObservable<T>& observable) = 0;
 	virtual ~IObserver() = default;
 };
 
@@ -26,7 +25,7 @@ class IObservable
 {
 public:
 	virtual ~IObservable() = default;
-	virtual void RegisterObserver(IObserver<T> & observer) = 0;
+	virtual void RegisterObserver(IObserver<T> & observer, size_t priority = 0) = 0;
 	virtual void NotifyObservers() = 0;
 	virtual void RemoveObserver(IObserver<T> & observer) = 0;
 };
@@ -38,23 +37,28 @@ class CObservable : public IObservable<T>
 public:
 	typedef IObserver<T> ObserverType;
 
-	void RegisterObserver(ObserverType & observer) override
+	void RegisterObserver(ObserverType & observer, size_t priority = 0) override
 	{
-		m_observers.insert(&observer);
+		m_observers[priority].insert(&observer);
 	}
 
 	void NotifyObservers() override
 	{
+		ClearObserversList();
+
 		T data = GetChangedData();
-		for (auto & observer : m_observers)
+		for (auto & it : m_observers)
 		{
-			observer->Update(data);
+			for (auto observer : it.second)
+			{
+				observer->Update(data, *this);
+			}
 		}
 	}
 
-	void RemoveObserver(ObserverType& observer) override
+	void RemoveObserver(ObserverType & observer) override
 	{
-		m_observers.erase(&observer);
+		m_observersToDelete.insert(&observer);
 	}
 
 protected:
@@ -63,5 +67,27 @@ protected:
 	virtual T GetChangedData() const = 0;
 
 private:
-	std::set<ObserverType *> m_observers;
+	std::map<size_t, std::set<ObserverType *>> m_observers;
+	std::set<ObserverType *> m_observersToDelete;
+
+	void ClearObserversList	()
+	{
+		for (auto observer : m_observersToDelete)
+		{
+			DeleteObserverFromList(*observer);
+		}
+		m_observersToDelete.clear();
+	}
+
+	void DeleteObserverFromList(ObserverType & observer)
+	{
+		for (auto & it : m_observers)
+		{
+			auto wantedObserver = it.second.find(&observer);
+			if (wantedObserver != it.second.end())
+			{
+				it.second.erase(wantedObserver);
+			}
+		}
+	}
 };
