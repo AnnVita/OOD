@@ -2,7 +2,7 @@
 
 #include "Beverage.h"
 
-enum ServingSizeOfMilkshake
+enum class ServingSizeOfMilkshake
 {
 	SMALL,
 	MEDIUM,

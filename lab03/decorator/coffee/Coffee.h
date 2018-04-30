@@ -2,7 +2,7 @@
 
 #include "Beverage.h"
 
-enum ServingSizeOfCoffe
+enum class ServingSizeOfCoffe
 {
 	STANDART,
 	DOUBLE

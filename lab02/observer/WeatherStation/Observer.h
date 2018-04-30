@@ -52,7 +52,7 @@ public:
 		}
 	}
 
-	void RemoveObserver(ObserverType & observer) override
+	void RemoveObserver(ObserverType& observer) override
 	{
 		m_observers.erase(&observer);
 	}

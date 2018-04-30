@@ -45,7 +45,7 @@ public:
 	}
 
 private:
-	double CountAverage()
+	double CountAverage() //CALULATE
 	{
 		return (m_counterValue == 0) ? 0 : m_accValue / m_counterValue;
 	}

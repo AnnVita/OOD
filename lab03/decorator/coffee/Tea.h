@@ -2,7 +2,7 @@
 
 #include "Beverage.h"
 
-enum TeaType
+enum class TeaType
 {
 	BLACK,
 	GREEN,
