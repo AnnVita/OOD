@@ -6,8 +6,7 @@
 class CPictureDraft
 {
 public:
-	typedef std::vector<std::unique_ptr<CShape>> ShapeStorage;
-
+	typedef std::vector<std::unique_ptr<CShape>> ShapeStorage;	
 	typedef  boost::indirect_iterator<ShapeStorage::const_iterator, const CShape&> ConstIterator;
 	CPictureDraft();
 	bool IsEmpty() const;
