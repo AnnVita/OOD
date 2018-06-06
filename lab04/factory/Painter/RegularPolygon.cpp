@@ -59,6 +59,3 @@ vector<Vertex> CRegularPolygon::GetVerticies() const
 	}
 	return verticies;
 }
-
-CRegularPolygon::~CRegularPolygon()
-{}

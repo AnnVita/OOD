@@ -20,7 +20,6 @@ public:
 	CPictureDraft(const CPictureDraft&) = delete;
 	CPictureDraft& operator=(const CPictureDraft&) = delete;
 
-	~CPictureDraft();
 private:
 	ShapeStorage m_shapes;
 };

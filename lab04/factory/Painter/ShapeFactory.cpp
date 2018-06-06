@@ -74,6 +74,3 @@ std::unique_ptr<CShape> CShapeFactory::GetRegularPolygonWith(const std::vector<s
 
 	return make_unique<CRegularPolygon>(color, center, radius, vertexCount);
 }
-
-CShapeFactory::~CShapeFactory()
-{}

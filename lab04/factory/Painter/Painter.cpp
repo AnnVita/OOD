@@ -11,6 +11,3 @@ void CPainter::DrawPicture(CPictureDraft & draft, ICanvas & canvas)
 		it->Draw(canvas);
 	}
 }
-
-CPainter::~CPainter()
-{}

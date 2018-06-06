@@ -35,6 +35,3 @@ void CRectangle::Draw(ICanvas & canvas) const
 	canvas.DrawLine(leftBottom, m_leftTop);
 	canvas.EndDraw();
 }
-
-CRectangle::~CRectangle()
-{}

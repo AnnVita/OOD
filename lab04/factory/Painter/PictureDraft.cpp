@@ -30,7 +30,3 @@ void CPictureDraft::AddShape(std::unique_ptr<CShape>&& shape)
 {
 	m_shapes.push_back(move(shape));
 }
-
-CPictureDraft::~CPictureDraft()
-{
-}

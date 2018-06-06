@@ -14,5 +14,3 @@ EColor CShape::GetColor() const
 	return m_color;
 }
 
-CShape::~CShape()
-{}

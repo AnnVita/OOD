@@ -31,7 +31,3 @@ CEllipse::CEllipse(EColor color, Vertex center, float horizontalRadius, float ve
 {
 	SetColor(color);
 }
-
-
-CEllipse::~CEllipse()
-{}

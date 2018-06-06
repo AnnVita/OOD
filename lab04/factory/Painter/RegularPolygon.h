@@ -9,7 +9,6 @@ public:
 	float GetRadius() const;
 	int GetVertexCount() const;
 	void Draw(ICanvas & canvas) const override;
-	~CRegularPolygon();
 private:
 	std::vector<Vertex> GetVerticies() const;
 	Vertex m_center;
