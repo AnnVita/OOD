@@ -1,0 +1,18 @@
+<svg version = "1.1" encoding="UTF - 8" xmlns = "http://www.w3.org/2000/svg">
+ <ellipse stroke="#ff5722ff" stroke-width="1" fill="#ff5722ff" cx="400" cy="550" rx="110" ry="150" />
+ <ellipse stroke="#ff9800ff" stroke-width="1" fill="#ff9800ff" cx="400" cy="530" rx="90" ry="90" />
+ <ellipse stroke="#ffeb3bff" stroke-width="1" fill="#ffeb3bff" cx="400" cy="510" rx="50" ry="50" />
+<path stroke="#607d8bff" stroke-width="1" fill="#607d8bff" d="M 400,100 L 320,200 L 480,200 L 400,100 " />
+<path stroke="#e9ece7ff" stroke-width="1" fill="#e9ece7ff" d="M 320,200 L 480,200 L 480,500 L 320,500 L 320,200 " />
+<path stroke="#607d8bff" stroke-width="1" fill="#607d8bff" d="M 320,500 L 480,500 L 480,520 L 320,520 L 320,500 " />
+<path stroke="#607d8bff" stroke-width="1" fill="#607d8bff" d="M 320,500 L 290,500 L 320,200 L 320,500 " />
+<path stroke="#607d8bff" stroke-width="1" fill="#607d8bff" d="M 480,200 L 510,500 L 480,500 L 480,200 " />
+ <ellipse stroke="#ff5722ff" stroke-width="1" fill="#ff5722ff" cx="770" cy="700" rx="290" ry="200" />
+ <ellipse stroke="#ff9800ff" stroke-width="1" fill="#ff9800ff" cx="770" cy="673.333" rx="237.273" ry="120" />
+ <ellipse stroke="#ffeb3bff" stroke-width="1" fill="#ffeb3bff" cx="770" cy="646.667" rx="131.818" ry="66.6667" />
+<path stroke="#607d8bff" stroke-width="1" fill="#607d8bff" d="M 770,100 L 559.091,233.333 L 980.909,233.333 L 770,100 " />
+<path stroke="#e9ece7ff" stroke-width="1" fill="#e9ece7ff" d="M 559.091,233.333 L 980.909,233.333 L 980.909,633.333 L 559.091,633.333 L 559.091,233.333 " />
+<path stroke="#607d8bff" stroke-width="1" fill="#607d8bff" d="M 980.909,233.333 L 1060,633.333 L 980.909,633.333 L 980.909,233.333 " />
+<path stroke="#607d8bff" stroke-width="1" fill="#607d8bff" d="M 559.091,633.333 L 480,633.333 L 559.091,233.333 L 559.091,633.333 " />
+<path stroke="#607d8bff" stroke-width="1" fill="#607d8bff" d="M 559.091,633.333 L 980.909,633.333 L 980.909,660 L 559.091,660 L 559.091,633.333 " />
+</svg>
