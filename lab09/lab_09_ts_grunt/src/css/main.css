@@ -1,0 +1,156 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    cursor: default;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section
+{
+    display: block;
+}
+body
+{
+    line-height: 1;
+}
+ol, ul
+{
+    list-style: none;
+}
+blockquote, q
+{
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after
+{
+    content: '';
+    content: none;
+}
+table
+{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+a
+{
+    cursor: pointer;
+}
+.clearfix:after
+{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+body
+{
+    font: 13px Arial, sans-serif;
+}
+
+.container
+{
+    margin: 25px auto;
+    padding: 25px 10px;
+    width: 1240px;
+    height: 500px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.canvas
+{
+    margin: 0 20px 0 0;
+    float: left;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.shape-control
+{
+    float: left;
+    width: 500px;
+    height: 500px;
+    position: relative;
+}
+
+.shape-select
+{
+    margin: 0 0 17px 0;
+    padding: 10px;
+    background-color: #FFF;
+    width: 432px;
+    box-sizing: border-box;
+    font-size: 20px;
+    display: block;
+}
+
+.shape-select:focus
+{
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.shape-info
+{
+    padding: 10px;
+    width: 432px;
+    font-size: 15px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.property
+{
+    margin: 0 0 20px 0;
+    display: inline-block;
+}
+
+.property-signature
+{
+    margin: 0 0 10px 0;
+}
+
+.color-parameters
+{
+
+}
+
+.input-text
+{
+    margin: 0 20px 0 0;
+    padding: 6px;
+    width: 190px;
+    font-size: 18px;
+}
+
+#rectangle-parameters
+{
+    display: none;
+}
+
+#triangle-parameters
+{
+    display: none;
+}
+
+#circle-parameters
+{
+    display: none;
+}

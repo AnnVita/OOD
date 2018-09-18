@@ -21,4 +21,3 @@ private:
 	std::shared_ptr<const IShapes> m_shapes;
 	std::unique_ptr<IGetStyleBehavior> m_style;
 };
-

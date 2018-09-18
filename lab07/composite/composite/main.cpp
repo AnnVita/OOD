@@ -67,7 +67,7 @@ int main()
 			auto headTriangleOutlineStyle = headTriangle->GetOutlineStyle();
 
 			headTriangleFillStyle->SetColor(GRAY_COLOR);
-			headTriangleOutlineStyle->SetColor(GRAY_COLOR);
+			headTriangleOutlineStyle->SetColor(RED_COLOR);
 
 			headTriangle->Draw(canvas);
 

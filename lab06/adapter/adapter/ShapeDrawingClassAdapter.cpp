@@ -3,8 +3,7 @@
 
 CShapeDrawingClassAdapter::CShapeDrawingClassAdapter(std::ostream & outputStream)
 	: CModernGraphicsRenderer(outputStream)
-{
-}
+{}
 
 void CShapeDrawingClassAdapter::MoveTo(int x, int y)
 {

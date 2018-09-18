@@ -43,6 +43,7 @@ private:
 	*/
 	void Update(SWeatherInfo const& data, IObservable<SWeatherInfo>& observable) override
 	{
+
 		m_statsTemperatureInfo->Update(data.temperature);
 		m_statsPressureInfo->Update(data.pressure);
 		m_statsHumidityInfo->Update(data.humidity);

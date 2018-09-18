@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "module": "system",
+        "target": "es5",
+        "noImplicitAny": false,
+        "noEmitOnError": true,
+        "sourceMap": false,
+        "outFile": "temp/canvas.js",
+        "rootDir": "src/ts"
+    }
+}
